@@ -1,6 +1,6 @@
-import Redis from "ioredis";
+const Redis = require("ioredis");
 
-export const redis = new Redis({ enableReadyCheck: true });
+const redis = new Redis({ enableReadyCheck: true });
 
 redis.on("ready", () => {
   console.info("Redis: Connected");
@@ -13,3 +13,5 @@ redis.on("error", (error) => {
 redis.on("reconnecting", () => {
   console.error("Redis attempting reconnect...");
 });
+
+exports.module = redis;

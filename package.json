@@ -4,7 +4,7 @@
   "description": "Backend Leaderboard Interview",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --watch . --exec babel-node app.js --unhandled-rejections=strict"
+    "start": "nodemon --watch . app.js --unhandled-rejections=strict"
   },
   "dependencies": {
     "express": "^4.17.1",

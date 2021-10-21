@@ -1,6 +1,6 @@
-import { Router } from "express";
+const Router = require("express").Router;
 
-export const interviewRoutes = () => {
+const interviewRoutes = () => {
   const router = Router();
 
   router.get("/", async (_req, res) => {
@@ -10,3 +10,5 @@ export const interviewRoutes = () => {
 
   return router;
 };
+
+exports.interviewRoutes = interviewRoutes;

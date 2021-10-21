@@ -1,7 +1,7 @@
-import express from "express";
-import { createServer } from "http";
-import { interviewRoutes } from "./routes";
-import { _redis } from "./redis";
+const express = require("express");
+const createServer = require("http").createServer;
+const interviewRoutes = require("./routes").interviewRoutes;
+const _redis = require("./redis").redis;
 
 class App {
   constructor() {
@@ -26,6 +26,6 @@ class App {
 const app = new App();
 const ipAddress = "0.0.0.0";
 const port = 5000;
-export default app.server.listen(port, ipAddress, () => {
+app.server.listen(port, ipAddress, () => {
   console.log(`App listening on ${ipAddress}:${port} process ${process.pid}`);
 });
