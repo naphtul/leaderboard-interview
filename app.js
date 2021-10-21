@@ -1,7 +1,7 @@
 import express from "express";
 import { createServer } from "http";
-import { interviewRoutes } from ".";
-import { json } from "body-parser";
+import { interviewRoutes } from "./routes";
+import { _redis } from "./redis";
 
 class App {
   constructor() {
@@ -12,13 +12,12 @@ class App {
   }
 
   middleware() {
-    this.app.use(json());
+    this.app.use(express.json());
   }
 
   routes() {
     this.app.use("/", interviewRoutes());
-    this.app.use((req, res) => {
-      req.log.warn(`Invalid Route: ${req.url}`);
+    this.app.use((_req, res) => {
       res.status(404).send("Invalid Route");
     });
   }
@@ -26,7 +25,7 @@ class App {
 
 const app = new App();
 const ipAddress = "0.0.0.0";
-const port = 4000;
+const port = 5000;
 export default app.server.listen(port, ipAddress, () => {
   console.log(`App listening on ${ipAddress}:${port} process ${process.pid}`);
 });

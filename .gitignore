@@ -6,6 +6,7 @@ yarn-error.log*
 lerna-debug.log*
 .DS_Store
 .vscode
+package-lock.json
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

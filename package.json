@@ -2,13 +2,12 @@
   "name": "leaderboard-interview",
   "version": "1.0.0",
   "description": "Backend Leaderboard Interview",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon --watch . --exec babel-node app.js --unhandled-rejections=strict"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "ioredis": "^4.27.9",
     "redis": "^3.1.2"
   },
   "devDependencies": {

@@ -21,4 +21,4 @@ Let's create a leaderboard together! Redis is perfect for this exercise! Haven't
 
 - Post new score to leaderboard ([Redis - ZADD](https://redis.io/commands/zadd))
 - Get all usernames/scores ([Redis - ZRANGE](https://redis.io/commands/zrange))
-- Get player score/rank ([Redis - ZRANK](https://redis.io/commands/zrank))
+  - Return array of objects with format - [ { username: <USERNAME>, score: <SCORE>, rank: <RANK> }, { ... }, ... ]
