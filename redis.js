@@ -1,6 +1,6 @@
 const Redis = require("ioredis");
 
-const redis = new Redis({ enableReadyCheck: true });
+const redis = new Redis({ enableReadyCheck: true, host: 'redis'});
 
 redis.on("ready", () => {
   console.info("Redis: Connected");

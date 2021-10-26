@@ -1,0 +1,23 @@
+GET http://localhost:5000/
+
+###
+
+POST http://localhost:5000/leaderboard?score=3&username=james
+
+###
+
+POST http://localhost:5000/leaderboard?score=9&username=john
+
+###
+
+POST http://localhost:5000/leaderboard?score=9&username=richie
+
+###
+
+POST http://localhost:5000/leaderboard?score=5&username=david
+
+###
+
+GET http://localhost:5000/leaderboard
+
+###

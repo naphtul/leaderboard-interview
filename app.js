@@ -1,7 +1,6 @@
 const express = require("express");
 const createServer = require("http").createServer;
 const interviewRoutes = require("./routes").interviewRoutes;
-const _redis = require("./redis").redis;
 
 class App {
   constructor() {
